@@ -1,4 +1,4 @@
-package mqhelloworld;
+package mqHelloworldDemo;
 
 import com.rabbitmq.client.*;
 

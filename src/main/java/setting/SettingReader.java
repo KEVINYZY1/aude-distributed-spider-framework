@@ -1,12 +1,10 @@
 package setting;
 
 import com.google.gson.Gson;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
 /**
  * Created by lrkin on 2016/11/16.
  * <p>
