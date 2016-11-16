@@ -1,0 +1,26 @@
+{
+  "workerid": 1,
+  "mq": [
+    {
+      "name": "main",
+      "host": "localhost",
+      "port": 5672,
+      "qos": 3,
+      "queue": "main"
+    },
+    {
+      "name": "data",
+      "host": "localhost",
+      "port": 5672,
+      "qos": 3,
+      "queue": "data"
+    }
+  ],
+  "sendto": [
+    "main",
+    "data"
+  ],
+  "recvfrom": [
+    "main"
+  ]
+}
