@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c62de764-70c4-44ad-9802-87ad5b16e4ba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rabbitmq-helloworld/Send.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rabbitmq-helloworld/directory-info.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mqhelloworld/Recv.java" afterPath="$PROJECT_DIR$/src/main/java/mqhelloworld/Recv.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/开发手记.md" afterPath="$PROJECT_DIR$/开发手记.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/setting/MqObject.java" afterPath="$PROJECT_DIR$/src/main/java/setting/MqObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/setting/SettingObject.java" afterPath="$PROJECT_DIR$/src/main/java/setting/SettingObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/setting/SettingReader.java" afterPath="$PROJECT_DIR$/src/main/java/setting/SettingReader.java" />
     </list>
     <ignored path="distributed-spider-java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,28 +28,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SettingReader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SettingReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/setting/SettingReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MqObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/setting/MqObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Send.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mqhelloworld/Send.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
               <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
@@ -121,11 +100,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/conf/directory-info.md" />
         <option value="$PROJECT_DIR$/conf/setting.json" />
-        <option value="$PROJECT_DIR$/src/main/java/setting/MqObject.java" />
         <option value="$PROJECT_DIR$/rabbitmq-helloworld/Send.java" />
         <option value="$PROJECT_DIR$/src/main/java/mqhelloworld/Send.java" />
         <option value="$PROJECT_DIR$/src/main/java/mqhelloworld/Recv.java" />
         <option value="$PROJECT_DIR$/开发手记.md" />
+        <option value="$PROJECT_DIR$/src/main/java/setting/MqObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/setting/SettingObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/setting/SettingReader.java" />
       </list>
     </option>
   </component>
@@ -148,8 +129,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="889" />
-    <option name="y" value="83" />
+    <option name="x" value="1301" />
+    <option name="y" value="22" />
     <option name="width" value="1557" />
     <option name="height" value="1240" />
   </component>
@@ -777,7 +758,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479277852762</updated>
-      <workItem from="1479277854027" duration="4688000" />
+      <workItem from="1479277854027" duration="5276000" />
     </task>
     <task id="LOCAL-00001" summary="keep moving&#10;">
       <created>1479281303255</created>
@@ -800,14 +781,21 @@
       <option name="project" value="LOCAL" />
       <updated>1479281590985</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="demo">
+      <created>1479282694022</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479282694022</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4688000" />
+    <option name="totallyTimeSpent" value="5276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="889" y="83" width="1557" height="1240" extended-state="0" />
+    <frame x="1301" y="22" width="1557" height="1240" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -847,7 +835,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="keep moving&#10;" />
     <MESSAGE value="test ide's vcs" />
-    <option name="LAST_COMMIT_MESSAGE" value="test ide's vcs" />
+    <MESSAGE value="demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -904,34 +893,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/setting/SettingObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/setting/SettingReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rabbitmq-helloworld/Send.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/setting/MqObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -975,6 +940,68 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mqhelloworld/Send.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/setting/MqObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/setting/SettingObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/setting/SettingReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
