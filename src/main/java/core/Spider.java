@@ -91,6 +91,17 @@ public class Spider {
     }
 
     /**
+     * 开始下载和解析,主要是让Receiver开始工作
+     */
+    public void begin() throws TimeoutException, SpiderSettingFileException, IOException {
+        readSettingFile();
+        logger.info("worker [" + this.settingObject.getWorkerid() + "] start...");
+        for (Map.Entry<String, MQReceiver> item : this.recvFromMap.entrySet()) {
+            new Thread(new RecvThread(this, item.getKey(), item.getValue(), this.sendToMap));
+        }
+    }
+
+    /**
      * 对于每一个MQReceiver,都启动一个线程来处理(主要是围绕consumer对象)
      */
     class RecvThread implements Runnable {
@@ -119,7 +130,22 @@ public class Spider {
                         case "url":
                             if (spider.downloader == null) throw new SpiderLackOfMethodException("url");
                             spider.downloader.download(item.getValue(), this.senderMap);
-                            logger.info("downloader download finish!");
+                            logger.info("downloader finish!");
+                            break;
+                        case "page":
+                            if (spider.processor == null) throw new SpiderLackOfMethodException("processor");
+                            spider.processor.process(item.getValue(), this.senderMap);
+                            logger.info("processor finish!");
+                            break;
+                        case "result":
+                            if (spider.saver == null) throw new SpiderLackOfMethodException("saver");
+                            spider.saver.save(item.getValue(), this.senderMap);
+                            logger.info("saver finish");
+                            break;
+                        default:
+                            if (spider.freeStaff == null) throw new SpiderLackOfMethodException("freestaff");
+                            spider.freeStaff.doSomething(item.getKey(), item.getValue(), this.senderMap);
+                            logger.info("freestaff finish!");
                             break;
                     }
                 } catch (ShutdownSignalException | ConsumerCancelledException | IOException | InterruptedException e) {
