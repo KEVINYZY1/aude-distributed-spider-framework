@@ -82,4 +82,15 @@ public class Spider {
             }
         }
     }
+
+    /**
+     * 对于
+     */
+    class RecvThread implements Runnable {
+
+        @Override
+        public void run() {
+
+        }
+    }
 }
