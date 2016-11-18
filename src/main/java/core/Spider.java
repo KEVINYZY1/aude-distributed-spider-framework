@@ -1,5 +1,8 @@
 package core;
 
+import com.rabbitmq.client.ConsumerCancelledException;
+import com.rabbitmq.client.ShutdownSignalException;
+import exception.SpiderLackOfMethodException;
 import exception.SpiderSettingFileException;
 import mq.MQItem;
 import mq.MQReceiver;
@@ -114,11 +117,14 @@ public class Spider {
                     logger.info("receive message from MQ[" + this.mqName + "]:" + item.getKey());
                     switch (item.getKey()) {
                         case "url":
-//                            if (spider.downloader == null) throw
+                            if (spider.downloader == null) throw new SpiderLackOfMethodException("url");
+                            spider.downloader.download(item.getValue(), this.senderMap);
+                            logger.info("downloader download finish!");
+                            break;
                     }
-                } catch (InterruptedException e) {
+                } catch (ShutdownSignalException | ConsumerCancelledException | IOException | InterruptedException e) {
                     e.printStackTrace();
-                } catch (IOException e) {
+                } catch (SpiderLackOfMethodException e) {
                     e.printStackTrace();
                 }
             }
