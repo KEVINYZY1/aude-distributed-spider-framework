@@ -1,6 +1,7 @@
 package core;
 
 import exception.SpiderSettingFileException;
+import mq.MQItem;
 import mq.MQReceiver;
 import mq.MQSender;
 import mq.MessageQueue;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
+import java.util.logging.Logger;
 
 /**
  * Created by lrkin on 2016/11/16.
@@ -26,6 +28,8 @@ public class Spider {
     private FreeStaff freeStaff;
     private String settingFilePath;
     private SettingObject settingObject;
+
+    private Logger logger = Logger.getLogger("spider");
 
     private Map<String, MqObject> mqMap = new HashMap<String, MqObject>();
     private Map<String, MessageQueue> sendToMap = new HashMap<String, MessageQueue>();
@@ -84,13 +88,40 @@ public class Spider {
     }
 
     /**
-     * 对于
+     * 对于每一个MQReceiver,都启动一个线程来处理(主要是围绕consumer对象)
      */
     class RecvThread implements Runnable {
+        private Spider spider;
+        private String mqName;
+        private MQReceiver receiver;
+        private Map<String, MessageQueue> senderMap;
+
+        public RecvThread(Spider spider, String mqName, MQReceiver receiver, Map<String, MessageQueue> senderMap) {
+            super();
+            this.spider = spider;
+            this.mqName = mqName;
+            this.receiver = receiver;
+            this.senderMap = senderMap;
+        }
 
         @Override
         public void run() {
-
+            //每一个receiver都对应一个死循环,来不停地接收来自queue的消息并处理
+            while (true) {
+                MQItem item;
+                try {
+                    item = receiver.recv();
+                    logger.info("receive message from MQ[" + this.mqName + "]:" + item.getKey());
+                    switch (item.getKey()) {
+                        case "url":
+//                            if (spider.downloader == null) throw
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
