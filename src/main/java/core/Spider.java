@@ -97,7 +97,7 @@ public class Spider {
         readSettingFile();
         logger.info("worker [" + this.settingObject.getWorkerid() + "] start...");
         for (Map.Entry<String, MQReceiver> item : this.recvFromMap.entrySet()) {
-            new Thread(new RecvThread(this, item.getKey(), item.getValue(), this.sendToMap));
+            (new Thread(new RecvThread(this, item.getKey(), item.getValue(), this.sendToMap))).start();
         }
     }
 
